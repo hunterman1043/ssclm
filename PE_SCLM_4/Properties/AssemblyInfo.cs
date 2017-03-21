@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 
-[assembly: AssemblyTitle("HNTR")]
+[assembly: AssemblyTitle("SSCLM")]
 [assembly: AssemblyDescription("A WPF App that connects the user to SVN Source Control in UE4")]
 [assembly: AssemblyConfiguration("Debug")]
 [assembly: AssemblyCompany("Project Enterprise")]

@@ -1,4 +1,4 @@
-﻿<Window x:Class="HNTR.PE_SCLM_4"
+﻿<Window x:Class="HNTR.SSCLM_4"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,7 +8,7 @@
         
         mc:Ignorable="d" 
         
-        Title="PE-SCLM_4" Width="800" Height="480" Background="{x:Null}" AllowsTransparency="True" 
+        Title="SSCLM_4" Width="800" Height="480" Background="{x:Null}" AllowsTransparency="True" 
         FontFamily="Helvetica LT Std" FontSize="10" 
         WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.DataContext>

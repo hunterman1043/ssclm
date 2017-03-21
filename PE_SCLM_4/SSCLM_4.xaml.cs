@@ -1,8 +1,8 @@
 ﻿using System.Windows;
 
 namespace HNTR {
-	public partial class PE_SCLM_4 : Window {
-		public PE_SCLM_4 () {
+	public partial class SSCLM_4 : Window {
+		public SSCLM_4 () {
 			InitializeComponent();
 		}
 	}
