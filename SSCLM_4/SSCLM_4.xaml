@@ -23,7 +23,7 @@
                             <SolidColorBrush Color="#FFF0F0F3" Opacity="0.1"/>
                         </Border.BorderBrush>
                         <DockPanel Background="#FFFCFCFF">
-                            <Button Command="{Binding File.DragTopPanel}" Height="39" DockPanel.Dock="Top">
+                            <Button DataContext="{Binding File}" Command="{Binding DragCommand}" Height="39" DockPanel.Dock="Top" ClickMode="Press">
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <DockPanel Background="#FF141417">
