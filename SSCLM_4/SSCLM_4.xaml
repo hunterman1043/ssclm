@@ -27,7 +27,7 @@
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <DockPanel Background="#FF141417">
-
+                                            <Button Command="" Width="30" HorizontalAlignment="Right" Margin="5"></Button>
                                         </DockPanel>
                                     </ControlTemplate>
                                 </Button.Template>

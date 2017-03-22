@@ -7,6 +7,7 @@ using HNTR.Models;
 namespace HNTR.ViewModels {
 	public class FilePanelViewModel {
 		public DocumentModel Document { get; private set; }
+        public ICommand CloseCommand { get; }
 		public ICommand DragCommand { get; }
 
 		public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -20,16 +21,21 @@ namespace HNTR.ViewModels {
 		public FilePanelViewModel (DocumentModel document) {
 			Document = document;
 			DragCommand = new RelayCommand (DragWindow);
+            CloseCommand = new RelayCommand (CloseWindow);
 			//File.RequestClose += (s, e) => Dispatcher.Invoke (this.Close);
 			//File.RequestMinimize += (s, e) => Dispatcher.Invoke (() => { this.WindowState = WindowState.Minimized; });
 		}
+
+        private void CloseWindow() {
+            
+        }
 
 		private void DragWindow() {
 			//Debug.WriteLine ("Hello World");
 			//Window.DragMove();
 
-			ReleaseCapture ();
-			SendMessage (new WindowInteropHelper (this).Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+			//ReleaseCapture ();
+			//SendMessage (new WindowInteropHelper (this).Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
 		}
 
 		/*public ICommand CloseCommand { get; }
