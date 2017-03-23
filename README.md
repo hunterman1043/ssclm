@@ -1,2 +1,2 @@
-# Secure Source Control Login Manager
+# Secure Subversion Login Manager
 A SVN+SSH to UE4 Application Suite using WPF, MVVM C#, and Powershell scripting.
