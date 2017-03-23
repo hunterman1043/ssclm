@@ -8,40 +8,47 @@
              mc:Ignorable="d" 
              FontFamily="Helvetica LT Std" 
              FontSize="10">
-    <!--<UserControl.DataContext>
+    
+    <UserControl.DataContext>
         <viewmodels:FilePanelViewModel />
-    </UserControl.DataContext>-->
+    </UserControl.DataContext>
+    
     <UserControl.Resources>
-        <Image x:Key="ExitButton" Source="..\Images\Delete-512_white.png" />
-        <Image x:Key="MainLogo" Source="..\Images\pEnt_logo_white.png" />
+        <Image x:Key="ExitButton" Source="..\Resources\Images\Delete-512_white.png" />
+        <Image x:Key="MainLogo" Source="..\Resources\Images\pEnt_logo_white.png" />
     </UserControl.Resources>
+    
+    
+    
     <Button Command="{Binding DragCommand}" 
             Height="39" 
             VerticalAlignment="Top"
-            ClickMode="Press">
+            Background="{x:Null}" 
+            BorderBrush="{x:Null}" 
+            Foreground="{x:Null}">
         <Button.Template>
             <ControlTemplate TargetType="Button">
                 <DockPanel Background="#FF141417">
                     <Button Command="" 
                             Width="30" 
-                            HorizontalAlignment="Left" 
                             Margin="5" 
                             BorderBrush="{x:Null}"
                             Background="{x:Null}"
+                            Foreground="{x:Null}"
                             RenderOptions.BitmapScalingMode="HighQuality"
                             Content="{StaticResource MainLogo}" />
                     <Label Foreground="#FFFCFCFF" 
                            VerticalAlignment="Center"
                            FontFamily="Helvetica LT Std Light"
-                           FontSize="12">
-                        S.S.L.M. (Secure Subversion Login Manager)
-                    </Label>
+                           FontSize="12" 
+                           Content="{Binding Title}" />
                     <Button Command="" 
                             Width="30" 
                             HorizontalAlignment="Right" 
                             Margin="5" 
                             BorderBrush="{x:Null}"
                             Background="{x:Null}"
+                            Foreground="{x:Null}"
                             RenderOptions.BitmapScalingMode="HighQuality"
                             Content="{StaticResource ExitButton}" />
                 </DockPanel>

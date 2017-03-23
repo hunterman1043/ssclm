@@ -16,7 +16,6 @@
     <Window.DataContext>
         <viewmodels:MainViewModel />
     </Window.DataContext>
-    
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Frame x:Name="frame">
             <Frame.Content>
@@ -26,10 +25,15 @@
                             <SolidColorBrush Color="#FFF0F0F3" 
                                              Opacity="0.1" />
                         </Border.BorderBrush>
-                        <DockPanel Background="#FFFCFCFF">
-                            <views:FilePanelView DockPanel.Dock="Top" />
-                            <DockPanel Background="#FF252528" 
-                                       DockPanel.Dock="Top" />
+                        <DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <views:FilePanelView />
+                            </DockPanel>
+                            <DockPanel>
+                                <DockPanel Background="#FF252528">
+                                    <Button Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5"/>
+                                </DockPanel>
+                            </DockPanel>
                         </DockPanel>
                     </Border>
                 </Page>

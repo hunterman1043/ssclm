@@ -7,10 +7,11 @@ using HNTR.Models;
 namespace HNTR.ViewModels {
 	public class FilePanelViewModel {
 		public DocumentModel Document { get; private set; }
+		public string Title { get; private set; }
         public ICommand CloseCommand { get; }
 		public ICommand DragCommand { get; }
 
-        /*public const int WM_NCLBUTTONDOWN = 0xA1;
+		/*public const int WM_NCLBUTTONDOWN = 0xA1;
 		public const int HT_CAPTION = 0x2;
 
 		[DllImportAttribute ("user32.dll")]
@@ -18,8 +19,8 @@ namespace HNTR.ViewModels {
 		[DllImportAttribute ("user32.dll")]
 		public static extern bool ReleaseCapture ();*/
 
-        public FilePanelViewModel () {
-            
+		public FilePanelViewModel () {
+			Title = Constants.MAIN_TITLE;
 			//DragCommand = new RelayCommand (DragWindow);
             //CloseCommand = new RelayCommand (CloseWindow);
 			//File.RequestClose += (s, e) => Dispatcher.Invoke (this.Close);
