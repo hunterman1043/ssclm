@@ -10,10 +10,10 @@
         <viewmodels:FilePanelViewModel />
     </UserControl.DataContext>-->
     <UserControl.Resources>
-        <Image x:Key="ExitButton" Source="..\Images\Delete-512_white.png"/>
+        <Image x:Key="ExitButton" Source="..\Images\Delete-512_white.png" />
+        <Image x:Key="MainLogo" Source="..\Images\pEnt_logo_white.png" />
     </UserControl.Resources>
-    <Button DataContext="{Binding File}" 
-            Command="{Binding DragCommand}" 
+    <Button Command="{Binding DragCommand}" 
             Height="39" 
             VerticalAlignment="Top"
             ClickMode="Press">
@@ -22,10 +22,19 @@
                 <DockPanel Background="#FF141417">
                     <Button Command="" 
                             Width="30" 
+                            HorizontalAlignment="Left" 
+                            Margin="5" 
+                            BorderBrush="{x:Null}"
+                            Background="{x:Null}"
+                            RenderOptions.BitmapScalingMode="HighQuality"
+                            Content="{StaticResource MainLogo}" />
+                    <Button Command="" 
+                            Width="30" 
                             HorizontalAlignment="Right" 
                             Margin="5" 
                             BorderBrush="{x:Null}"
                             Background="{x:Null}"
+                            RenderOptions.BitmapScalingMode="HighQuality"
                             Content="{StaticResource ExitButton}" />
                 </DockPanel>
             </ControlTemplate>
