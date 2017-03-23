@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HNTR"
         xmlns:viewmodels="clr-namespace:HNTR.ViewModels"
-        
         mc:Ignorable="d" 
         
-        Title="SSCLM_4" Width="640" Height="480" Background="{x:Null}" AllowsTransparency="True" 
+        Title="SSCLM_4" 
+        Width="640" Height="480" 
+        Background="{x:Null}" AllowsTransparency="True" 
         FontFamily="Helvetica LT Std" FontSize="10" 
-        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        WindowStyle="None" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <viewmodels:MainViewModel />
     </Window.DataContext>
@@ -20,19 +22,28 @@
                 <Page>
                     <Border BorderThickness="1">
                         <Border.BorderBrush>
-                            <SolidColorBrush Color="#FFF0F0F3" Opacity="0.1"/>
+                            <SolidColorBrush Color="#FFF0F0F3" 
+                                             Opacity="0.1"/>
                         </Border.BorderBrush>
                         <DockPanel Background="#FFFCFCFF">
-                            <Button DataContext="{Binding File}" Command="{Binding DragCommand}" Height="39" DockPanel.Dock="Top" ClickMode="Press">
+                            <Button DataContext="{Binding File}" 
+                                    Command="{Binding DragCommand}" 
+                                    Height="39" 
+                                    DockPanel.Dock="Top" 
+                                    ClickMode="Press">
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <DockPanel Background="#FF141417">
-                                            <Button Command="" Width="30" HorizontalAlignment="Right" Margin="5"></Button>
+                                            <Button Command="" 
+                                                    Width="30" 
+                                                    HorizontalAlignment="Right" 
+                                                    Margin="5" />
                                         </DockPanel>
                                     </ControlTemplate>
                                 </Button.Template>
                             </Button>
-                            <DockPanel Background="#FF252528" DockPanel.Dock="Top"/>
+                            <DockPanel Background="#FF252528" 
+                                       DockPanel.Dock="Top"/>
                         </DockPanel>
                     </Border>
                 </Page>
