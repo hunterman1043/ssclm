@@ -8,7 +8,7 @@
         
         mc:Ignorable="d" 
         
-        Title="SSCLM_4" Width="800" Height="480" Background="{x:Null}" AllowsTransparency="True" 
+        Title="SSCLM_4" Width="640" Height="480" Background="{x:Null}" AllowsTransparency="True" 
         FontFamily="Helvetica LT Std" FontSize="10" 
         WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
