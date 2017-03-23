@@ -10,7 +10,7 @@ namespace HNTR.ViewModels {
         public ICommand CloseCommand { get; }
 		public ICommand DragCommand { get; }
 
-		/*public const int WM_NCLBUTTONDOWN = 0xA1;
+        /*public const int WM_NCLBUTTONDOWN = 0xA1;
 		public const int HT_CAPTION = 0x2;
 
 		[DllImportAttribute ("user32.dll")]
@@ -18,10 +18,10 @@ namespace HNTR.ViewModels {
 		[DllImportAttribute ("user32.dll")]
 		public static extern bool ReleaseCapture ();*/
 
-		public FilePanelViewModel (DocumentModel document) {
-			Document = document;
-			DragCommand = new RelayCommand (DragWindow);
-            CloseCommand = new RelayCommand (CloseWindow);
+        public FilePanelViewModel () {
+            
+			//DragCommand = new RelayCommand (DragWindow);
+            //CloseCommand = new RelayCommand (CloseWindow);
 			//File.RequestClose += (s, e) => Dispatcher.Invoke (this.Close);
 			//File.RequestMinimize += (s, e) => Dispatcher.Invoke (() => { this.WindowState = WindowState.Minimized; });
 		}

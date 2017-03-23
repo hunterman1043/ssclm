@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HNTR"
         xmlns:viewmodels="clr-namespace:HNTR.ViewModels"
+        xmlns:views="clr-namespace:HNTR.Views"
         mc:Ignorable="d" 
         
         Title="SSCLM_4" 
@@ -16,9 +17,7 @@
     <Window.DataContext>
         <viewmodels:MainViewModel />
     </Window.DataContext>
-    <Window.Resources>
-        <Image x:Key="ExitButton" Source="Images\Delete-512_white.png"/>
-    </Window.Resources>
+    
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Frame x:Name="frame">
             <Frame.Content>
@@ -26,30 +25,12 @@
                     <Border BorderThickness="1">
                         <Border.BorderBrush>
                             <SolidColorBrush Color="#FFF0F0F3" 
-                                             Opacity="0.1"/>
+                                             Opacity="0.1" />
                         </Border.BorderBrush>
                         <DockPanel Background="#FFFCFCFF">
-                            <Button DataContext="{Binding File}" 
-                                    Command="{Binding DragCommand}" 
-                                    Height="39" 
-                                    DockPanel.Dock="Top" 
-                                    ClickMode="Press">
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <DockPanel Background="#FF141417">
-                                            <Button Command="" 
-                                                    Width="30" 
-                                                    HorizontalAlignment="Right" 
-                                                    Margin="5" 
-                                                    BorderBrush="{x:Null}"
-                                                    Background="{x:Null}"
-                                                    Content="{StaticResource ExitButton}"/>
-                                        </DockPanel>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
+                            <views:FilePanelView DockPanel.Dock="Top" />
                             <DockPanel Background="#FF252528" 
-                                       DockPanel.Dock="Top"/>
+                                       DockPanel.Dock="Top" />
                         </DockPanel>
                     </Border>
                 </Page>

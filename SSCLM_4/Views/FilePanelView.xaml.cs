@@ -18,9 +18,9 @@ namespace HNTR.Views
     /// <summary>
     /// Interaction logic for ucTopPanelMenu.xaml
     /// </summary>
-    public partial class ucTopPanelMenu : UserControl
+    public partial class FilePanelView : UserControl
     {
-        public ucTopPanelMenu()
+        public FilePanelView()
         {
             InitializeComponent();
         }
