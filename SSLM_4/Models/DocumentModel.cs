@@ -1,4 +1,6 @@
-﻿namespace HNTR.Models {
+﻿using GalaSoft.MvvmLight;
+
+namespace HNTR.Models {
 	public class DocumentModel : ObservableObject {
 		/*private string _text;
 		public string Text {

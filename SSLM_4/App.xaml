@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:HNTR"
              StartupUri="SSLM_4.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles\MasterStyles.xaml" />
+                <ResourceDictionary Source="Styles\MasterTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

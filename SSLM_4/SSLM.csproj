@@ -113,6 +113,14 @@
       <DependentUpon>SSLM_4.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Styles\MasterStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\MasterTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\FilePanelView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,24 +168,24 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Images\Attention-512.png" />
-    <Resource Include="Resources\Images\Attention-512_white.png" />
-    <Resource Include="Resources\Images\Delete-512.png" />
-    <Resource Include="Resources\Images\Delete-512_white.png" />
-    <Resource Include="Resources\Images\Discord-512.png" />
-    <Resource Include="Resources\Images\Discord-512_white.png" />
-    <Resource Include="Resources\Images\Help-512.png" />
-    <Resource Include="Resources\Images\Help-512_white.png" />
-    <Resource Include="Resources\Images\Info-512.png" />
-    <Resource Include="Resources\Images\Info-512_white.png" />
-    <Resource Include="Resources\Images\Key-512.png" />
-    <Resource Include="Resources\Images\Key-512_white.png" />
-    <Resource Include="Resources\Images\Minus-512.png" />
-    <Resource Include="Resources\Images\Minus-512_white.png" />
-    <Resource Include="Resources\Images\Open_Folder-512.png" />
-    <Resource Include="Resources\Images\Open_Folder-512_white.png" />
-    <Resource Include="Resources\Images\pEnt_logo.png" />
-    <Resource Include="Resources\Images\pEnt_logo_white.png" />
+    <Resource Include="Resources\Attention-512.png" />
+    <Resource Include="Resources\Attention-512_white.png" />
+    <Resource Include="Resources\Delete-512.png" />
+    <Resource Include="Resources\Delete-512_white.png" />
+    <Resource Include="Resources\Discord-512.png" />
+    <Resource Include="Resources\Discord-512_white.png" />
+    <Resource Include="Resources\Help-512.png" />
+    <Resource Include="Resources\Help-512_white.png" />
+    <Resource Include="Resources\Info-512.png" />
+    <Resource Include="Resources\Info-512_white.png" />
+    <Resource Include="Resources\Key-512.png" />
+    <Resource Include="Resources\Key-512_white.png" />
+    <Resource Include="Resources\Minus-512.png" />
+    <Resource Include="Resources\Minus-512_white.png" />
+    <Resource Include="Resources\Open_Folder-512.png" />
+    <Resource Include="Resources\Open_Folder-512_white.png" />
+    <Resource Include="Resources\pEnt_logo.png" />
+    <Resource Include="Resources\pEnt_logo_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
