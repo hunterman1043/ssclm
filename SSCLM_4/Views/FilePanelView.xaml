@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:viewmodels="clr-namespace:HNTR.ViewModels"
              xmlns:local="clr-namespace:HNTR.Views"
-             mc:Ignorable="d" >
+             mc:Ignorable="d" 
+             FontFamily="Helvetica LT Std" 
+             FontSize="10">
     <!--<UserControl.DataContext>
         <viewmodels:FilePanelViewModel />
     </UserControl.DataContext>-->
@@ -28,6 +30,12 @@
                             Background="{x:Null}"
                             RenderOptions.BitmapScalingMode="HighQuality"
                             Content="{StaticResource MainLogo}" />
+                    <Label Foreground="#FFFCFCFF" 
+                           VerticalAlignment="Center"
+                           FontFamily="Helvetica LT Std Light"
+                           FontSize="12">
+                        S.S.L.M. (Secure Subversion Login Manager)
+                    </Label>
                     <Button Command="" 
                             Width="30" 
                             HorizontalAlignment="Right" 
