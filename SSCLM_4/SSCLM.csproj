@@ -139,7 +139,26 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Attention-512.png" />
+    <Resource Include="Images\Attention-512_white.png" />
+    <Resource Include="Images\Delete-512.png" />
+    <Resource Include="Images\Delete-512_white.png" />
+    <Resource Include="Images\Discord-512.png" />
+    <Resource Include="Images\Discord-512_white.png" />
+    <Resource Include="Images\Help-512.png" />
+    <Resource Include="Images\Help-512_white.png" />
+    <Resource Include="Images\Info-512.png" />
+    <Resource Include="Images\Info-512_white.png" />
+    <Resource Include="Images\Key-512.png" />
+    <Resource Include="Images\Key-512_white.png" />
+    <Resource Include="Images\Minus-512.png" />
+    <Resource Include="Images\Minus-512_white.png" />
+    <Resource Include="Images\Open_Folder-512.png" />
+    <Resource Include="Images\Open_Folder-512_white.png" />
+    <Resource Include="Images\pEnt_logo.png" />
+    <Resource Include="Images\pEnt_logo_white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

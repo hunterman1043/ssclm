@@ -37,7 +37,11 @@
                                             <Button Command="" 
                                                     Width="30" 
                                                     HorizontalAlignment="Right" 
-                                                    Margin="5" />
+                                                    Margin="5" BorderBrush="{x:Null}" >
+                                                <Button.Background>
+                                                    <ImageBrush/>
+                                                </Button.Background>
+                                            </Button>
                                         </DockPanel>
                                     </ControlTemplate>
                                 </Button.Template>
