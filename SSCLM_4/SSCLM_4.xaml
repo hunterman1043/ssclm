@@ -16,6 +16,9 @@
     <Window.DataContext>
         <viewmodels:MainViewModel />
     </Window.DataContext>
+    <Window.Resources>
+        <Image x:Key="ExitButton" Source="Images\Delete-512_white.png"/>
+    </Window.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Frame x:Name="frame">
             <Frame.Content>
@@ -37,11 +40,10 @@
                                             <Button Command="" 
                                                     Width="30" 
                                                     HorizontalAlignment="Right" 
-                                                    Margin="5" BorderBrush="{x:Null}" >
-                                                <Button.Background>
-                                                    <ImageBrush/>
-                                                </Button.Background>
-                                            </Button>
+                                                    Margin="5" 
+                                                    BorderBrush="{x:Null}"
+                                                    Background="{x:Null}"
+                                                    Content="{StaticResource ExitButton}"/>
                                         </DockPanel>
                                     </ControlTemplate>
                                 </Button.Template>
