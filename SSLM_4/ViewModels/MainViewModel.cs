@@ -1,8 +1,8 @@
-﻿using HNTR.Models;
-using System.Windows.Threading;
+﻿using GalaSoft.MvvmLight;
+using HNTR.Models;
 
 namespace HNTR.ViewModels {
-	class MainViewModel {
+	class MainViewModel : ViewModelBase {
 		private DocumentModel _document;
 		public FilePanelViewModel File { get; private set; }
 

@@ -2,9 +2,11 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:HNTR"
+             xmlns:vm="clr-namespace:HNTR.ViewModels"
              StartupUri="SSLM_4.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            <vm:ViewModelLocator x:Key="Locator" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles\MasterStyles.xaml" />
                 <ResourceDictionary Source="Styles\MasterTemplates.xaml" />

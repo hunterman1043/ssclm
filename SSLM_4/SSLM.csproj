@@ -98,6 +98,7 @@
     <Compile Include="Models\DocumentModel.cs" />
     <Compile Include="ViewModels\FilePanelViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Compile Include="Views\FilePanelView.xaml.cs">
       <DependentUpon>FilePanelView.xaml</DependentUpon>
     </Compile>

@@ -5,10 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:viewmodels="clr-namespace:HNTR.ViewModels"
              xmlns:local="clr-namespace:HNTR.Views"
-             mc:Ignorable="d" >
-    <UserControl.DataContext>
-        <viewmodels:FilePanelViewModel />
-    </UserControl.DataContext>
+             mc:Ignorable="d" 
+             DataContext="{Binding File, Source={StaticResource Locator}}">
     <Button Command="{Binding DragCommand}"  
             Template="{StaticResource ResourceKey=FilePanelTemplate}" />
 </UserControl>
