@@ -8,8 +8,9 @@
         <ResourceDictionary>
             <vm:ViewModelLocator x:Key="Locator" />
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles\MasterStyles.xaml" />
-                <ResourceDictionary Source="Styles\MasterTemplates.xaml" />
+                <ResourceDictionary Source="Styles\ButtonStyles.xaml" />
+                <ResourceDictionary Source="Styles\GridStyles.xaml" />
+                <ResourceDictionary Source="Styles\LabelStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
