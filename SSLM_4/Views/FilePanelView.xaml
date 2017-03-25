@@ -9,7 +9,9 @@
         <viewmodels:FilePanelViewModel />
     </UserControl.DataContext>
     <Button Style="{StaticResource TopPanelWrp}">
-        <Grid Style="{StaticResource TopPanel}">
+        <Grid Style="{StaticResource TopPanel}" 
+              Background="#FF141417" 
+              Name="grid1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="2*" />
@@ -34,7 +36,8 @@
                         <Image Source="../Resources/Minus-512_white.png" />
                     </StackPanel>
                 </Button>
-                <Button Style="{StaticResource ExitButton}">
+                <Button Style="{StaticResource ExitButton}"
+                        Name="exitButton">
                     <StackPanel>
                         <Image Source="../Resources/Delete-512_white.png" />
                     </StackPanel>
