@@ -4,11 +4,11 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 
-[assembly: AssemblyTitle("SSCLM")]
+[assembly: AssemblyTitle("SSLM")]
 [assembly: AssemblyDescription("A WPF App that connects the user to SVN Source Control in UE4")]
 [assembly: AssemblyConfiguration("Debug")]
 [assembly: AssemblyCompany("Project Enterprise")]
-[assembly: AssemblyProduct("Source Control Login Manager")]
+[assembly: AssemblyProduct("Secure Subversion Login Manager")]
 [assembly: AssemblyCopyright("Copyright © 2017, GNU 3.0")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
