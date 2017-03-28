@@ -1,10 +1,9 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Runtime.InteropServices;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using HNTR.Models;
+using HNTR.Helpers;
 
 namespace HNTR.ViewModels {
 	public class WindowViewModel : ViewModelBase {
@@ -31,6 +30,7 @@ namespace HNTR.ViewModels {
 
 		public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + BorderThickness); } }
 		public Thickness ResizeBorderThickness { get { return new Thickness(BorderThickness + OuterMarginSize); } }
+		public Thickness InnerContentPadding { get { return new Thickness(BorderThickness); } }
 		public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize); } }
 		public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
 
@@ -71,6 +71,8 @@ namespace HNTR.ViewModels {
 			MaximizeCommand = new RelayCommand(() => _Window.WindowState ^= WindowState.Maximized);
 			CloseCommand = new RelayCommand(() => _Window.Close());
 			MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(_Window, GetMousePosition()));
+
+			var resizer = new WindowResizer(_Window);
 		}
 
 		#region Helpers

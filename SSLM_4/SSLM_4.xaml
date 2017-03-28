@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HNTR"
         xmlns:viewmodels="clr-namespace:HNTR.ViewModels"
         xmlns:views="clr-namespace:HNTR.Views"
-        mc:Ignorable="d" 
+        mc:Ignorable="d"
         
         Name="MainWindow"
         Title="{Binding Title}"
@@ -27,65 +27,93 @@
                     <ControlTemplate TargetType="{x:Type Window}">
                         <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}">
                             <Grid>
-                                <!--<Border x:Name="Container"
-                                        Background="{StaticResource TitleBarForegroundBrush}"
-                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">-->
-                                    <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
-                                            Background="{StaticResource AppBackgroundBrush}">
-                                        <Border.Effect>
-                                            <DropShadowEffect ShadowDepth="0"
-                                                              Opacity="0.5" />
-                                        </Border.Effect>
-                                        <Grid>
-                                            <!--<Grid.OpacityMask>
-                                                <VisualBrush Visual="{Binding ElementName=Container}" />
-                                            </Grid.OpacityMask>-->
-                                            
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=40}" />
-                                                <RowDefinition Height="Auto" />
-                                                <RowDefinition Height="*" />
-                                            </Grid.RowDefinitions>
+                                <Border x:Name="Container"
+                                        Background="{StaticResource AppBackgroundBrush}"
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" />
+                                <Border Background="{StaticResource AppBackgroundBrush}"
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="0"
+                                                          Color="{StaticResource TitleBarForegroundLight}"
+                                                          Opacity="0.2" />
+                                    </Border.Effect>
+                                </Border>
+                                <Grid>
+                                    <Grid.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=Container}" />
+                                    </Grid.OpacityMask>
 
-                                            <Grid Grid.Row="0" 
-                                                  Panel.ZIndex="1"
-                                                  Background="{StaticResource TitleBarBackgroundBrush}">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="Auto" />
-                                                </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=40}" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
 
-                                                <Button Grid.Column="0"
-                                                        Command="{Binding MenuCommand}"
-                                                        Style="{StaticResource SysIconBtn}">
-                                                    <Image Source="Resources/Images/Logo/pEnt_logo_white.png" />
-                                                </Button>
+                                    <Grid Grid.Row="0" 
+                                          Panel.ZIndex="1"
+                                          Background="{StaticResource TitleBarBackgroundBrush}">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
 
-                                                <Viewbox Grid.Column="1">
-                                                    <TextBlock Style="{StaticResource HeaderText}" 
-                                                               Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Test'}" />
-                                                </Viewbox>
+                                        <Button Grid.Column="0"
+                                                Command="{Binding MenuCommand}"
+                                                Style="{StaticResource SysIconBtn}">
+                                            <Image Source="Resources/Images/Logo/pEnt_logo_white.png" />
+                                        </Button>
 
-                                                <StackPanel Grid.Column="2"
-                                                            Orientation="Horizontal">
-                                                    <Button Style="{StaticResource WindowCtrlBtn}"
-                                                            Command="{Binding MinimizeCommand}">
-                                                        <Image Source="Resources/Images/UI/Minus-512_white.png" />
-                                                    </Button>
-                                                    <Button Style="{StaticResource WindowCtrlBtn}"
-                                                            Command="{Binding MaximizeCommand}">
-                                                        <Image Source="Resources/Images/UI/Plus-512_white.png" />
-                                                    </Button>
-                                                    <Button Style="{StaticResource WindowCloseBtn}"
-                                                            Command="{Binding CloseCommand}">
-                                                        <Image Source="Resources/Images/UI/Delete-512_white.png" />
-                                                    </Button>
-                                                </StackPanel>
-                                            </Grid>
-                                        </Grid>
+                                        <Viewbox Grid.Column="1">
+                                            <TextBlock Style="{StaticResource HeaderText}" 
+                                                       Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Test'}" />
+                                        </Viewbox>
+
+                                        <StackPanel Grid.Column="2"
+                                                    Orientation="Horizontal">
+                                            <Button Style="{StaticResource WindowCtrlBtn}"
+                                                    Command="{Binding MinimizeCommand}">
+                                                <Image Source="Resources/Images/UI/Minus-512_white.png" />
+                                            </Button>
+                                            <Button Style="{StaticResource WindowCtrlBtn}"
+                                                    Command="{Binding MaximizeCommand}">
+                                                <Image Source="Resources/Images/UI/Max-512_white.png" />
+                                            </Button>
+                                            <Button Style="{StaticResource WindowCloseBtn}"
+                                                    Command="{Binding CloseCommand}">
+                                                <Image Source="Resources/Images/UI/Delete-512_white.png" />
+                                            </Button>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Border Grid.Row="1"
+                                            Height="6"
+                                            BorderThickness="0 0.2 0 0">
+                                        <Border.BorderBrush>
+                                            <LinearGradientBrush StartPoint="0,0" 
+                                                                 EndPoint="1,0">
+                                                <GradientStop Color="{StaticResource AppBackgroundDark}"
+                                                              Offset="0.0" />
+                                                <GradientStop Color="{StaticResource TitleBarForegroundLight}"
+                                                              Offset="0.5" />
+                                                <GradientStop Color="{StaticResource AppBackgroundDark}"
+                                                              Offset="1.0" />
+                                            </LinearGradientBrush>
+                                        </Border.BorderBrush>
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0,0" 
+                                                                 EndPoint="0,1">
+                                                <GradientStop Color="{StaticResource TitleBarBackgroundDark}"
+                                                              Offset="0.0" />
+                                                <GradientStop Color="{StaticResource AppBackgroundDark}"
+                                                              Offset="0.25" />
+                                            </LinearGradientBrush>
+                                        </Border.Background>
                                     </Border>
-                                <!--</Border>-->
+                                    <Border Grid.Row="2"
+                                            Padding="6 0 6 6">
+                                        <ListView Background="Transparent" BorderBrush="Transparent" />
+                                    </Border>
+                                </Grid>
                             </Grid>
                         </Border>
                     </ControlTemplate>
@@ -100,6 +128,8 @@
                       GlassFrameThickness="0"
                       CornerRadius="0" />
     </WindowChrome.WindowChrome>
+
+    <Grid Background="{StaticResource AppBackgroundBrush}"></Grid>
     
     <!--<ScrollViewer VerticalScrollBarVisibility="Auto">
         <Frame x:Name="frame">

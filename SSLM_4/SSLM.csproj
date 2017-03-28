@@ -104,6 +104,7 @@
     </ApplicationDefinition>
     <Compile Include="Helpers\MinimizeMessage.cs" />
     <Compile Include="Helpers\CloseMessage.cs" />
+    <Compile Include="Helpers\WindowResizer.cs" />
     <Compile Include="Models\Constants.cs" />
     <Compile Include="Models\DocumentModel.cs" />
     <Compile Include="ViewModels\FilePanelViewModel.cs" />
@@ -220,6 +221,10 @@
   <ItemGroup>
     <Resource Include="Resources\Images\UI\Plus-512.png" />
     <Resource Include="Resources\Images\UI\Plus-512_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\UI\Max-512.png" />
+    <Resource Include="Resources\Images\UI\Max-512_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
