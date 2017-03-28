@@ -34,7 +34,7 @@
                                         CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">
                                     <Border.Effect>
                                         <DropShadowEffect ShadowDepth="0"
-                                                          Color="{StaticResource TitleBarForegroundLight}"
+                                                          Color="{StaticResource AppBackgroundDark}"
                                                           Opacity="0.2" />
                                     </Border.Effect>
                                 </Border>
@@ -44,7 +44,7 @@
                                     </Grid.OpacityMask>
 
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=40}" />
+                                        <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=42}" />
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
@@ -64,11 +64,22 @@
                                             <Image Source="Resources/Images/Logo/pEnt_logo_white.png" />
                                         </Button>
 
-                                        <Viewbox Grid.Column="1">
-                                            <TextBlock Style="{StaticResource HeaderText}" 
-                                                       Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Test'}" />
+                                        <Viewbox Grid.Column="0" 
+                                                 Grid.ColumnSpan="3" 
+                                                 Margin="0 5">
+                                            <StackPanel>
+                                                <TextBlock FontFamily="{StaticResource LatoBlack}"
+                                                           Margin="0 0 0 -5"
+                                                           HorizontalAlignment="Center">
+                                                    <Run Text="SSLM" 
+                                                         Foreground="{StaticResource TitleBarForegroundBrush}" 
+                                                         FontSize="{StaticResource FontSizeLogo}" />
+                                                </TextBlock>
+                                                <TextBlock Text="Secure Subversion Login Manager" 
+                                                           Foreground="{StaticResource AppBackgroundBrush}"
+                                                           FontFamily="{StaticResource LatoRegular}" />
+                                            </StackPanel>
                                         </Viewbox>
-
                                         <StackPanel Grid.Column="2"
                                                     Orientation="Horizontal">
                                             <Button Style="{StaticResource WindowCtrlBtn}"

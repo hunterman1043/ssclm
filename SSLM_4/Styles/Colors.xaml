@@ -10,7 +10,7 @@
     <Color x:Key="TitleBarForegroundLight">#FCFCFF</Color>
     <SolidColorBrush x:Key="TitleBarForegroundBrush" Color="{StaticResource TitleBarForegroundLight}" />
 
-    <Color x:Key="TitleBarBackgroundDark">#FF141417</Color>
+    <Color x:Key="TitleBarBackgroundDark">#4C4C50</Color>
     <SolidColorBrush x:Key="TitleBarBackgroundBrush" Color="{StaticResource TitleBarBackgroundDark}" />
     
     <Color x:Key="MinimizeMouseOverBackground">#404043</Color>
@@ -18,8 +18,9 @@
     
     <Color x:Key="MinimizePressedBackground">#8E8E92</Color>
     <SolidColorBrush x:Key="MinimizePressedBackgroundBrush" Color="{StaticResource MinimizePressedBackground}" />
-    
-    <SolidColorBrush x:Key="CloseMouseOverBackgroundBrush" Color="DarkRed" />
+
+    <Color x:Key="CloseMouseOverBackground">#E81123</Color>
+    <SolidColorBrush x:Key="CloseMouseOverBackgroundBrush" Color="{StaticResource CloseMouseOverBackground}" />
     
     <Color x:Key="ClosePressedBackground">#E53E3E</Color>
     <SolidColorBrush x:Key="ClosePressedBackgroundBrush" Color="{StaticResource ClosePressedBackground}" />

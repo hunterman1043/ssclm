@@ -24,7 +24,7 @@ namespace HNTR.ViewModels {
 		public string Title { get; private set; }
 
 		public int BorderThickness { get; set; } = 6;
-		public int TitleHeight { get; set; } = 36;
+		public int TitleHeight { get; set; } = 42;
 		public double MinWindowWidth { get; set; } = 640;
 		public double MinWindowHeight { get; set; } = 480;
 
