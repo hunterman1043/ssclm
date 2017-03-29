@@ -25,14 +25,15 @@ namespace HNTR.ViewModels {
 
 		public int BorderThickness { get; set; } = 6;
 		public int TitleHeight { get; set; } = 42;
-		public double MinWindowWidth { get; set; } = 640;
-		public double MinWindowHeight { get; set; } = 480;
+		public double MinWindowWidth { get; set; } = 800;
+		public double MinWindowHeight { get; set; } = 600;
 
 		public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + BorderThickness); } }
 		public Thickness ResizeBorderThickness { get { return new Thickness(BorderThickness + OuterMarginSize); } }
-		public Thickness InnerContentPadding { get { return new Thickness(BorderThickness); } }
+		public Thickness InnerContentPadding { get { return new Thickness(BorderThickness, 0, BorderThickness, BorderThickness); } }
 		public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize); } }
 		public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
+		public CornerRadius InnerPaneCornerRadius { get { return new CornerRadius(0, 0, WindowRadius / 2, WindowRadius / 2); } }
 
 		public int OuterMarginSize {
 			get {

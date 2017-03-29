@@ -10,8 +10,8 @@
         
         Name="MainWindow"
         Title="{Binding Title}"
-        Width="640" 
-        Height="480"
+        Width="800" 
+        Height="600"
         MinWidth="{Binding MinWindowWidth}"
         MinHeight="{Binding MinWindowHeight}"
         Background="{x:Null}" 
@@ -45,7 +45,7 @@
 
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=42}" />
-                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="1" />
                                         <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
 
@@ -66,10 +66,10 @@
 
                                         <Viewbox Grid.Column="0" 
                                                  Grid.ColumnSpan="3" 
-                                                 Margin="0 5">
+                                                 Margin="0 4">
                                             <StackPanel>
                                                 <TextBlock FontFamily="{StaticResource LatoBlack}"
-                                                           Margin="0 0 0 -5"
+                                                           Margin="0 0 0 -2"
                                                            HorizontalAlignment="Center">
                                                     <Run Text="SSLM" 
                                                          Foreground="{StaticResource TitleBarForegroundBrush}" 
@@ -77,7 +77,8 @@
                                                 </TextBlock>
                                                 <TextBlock Text="Secure Subversion Login Manager" 
                                                            Foreground="{StaticResource AppBackgroundBrush}"
-                                                           FontFamily="{StaticResource LatoRegular}" />
+                                                           FontFamily="{StaticResource LatoRegular}"
+                                                           Margin="0 -2"/>
                                             </StackPanel>
                                         </Viewbox>
                                         <StackPanel Grid.Column="2"
@@ -121,8 +122,8 @@
                                         </Border.Background>
                                     </Border>
                                     <Border Grid.Row="2"
-                                            Padding="6 0 6 6">
-                                        <ListView Background="Transparent" BorderBrush="Transparent" />
+                                            Padding="{Binding InnerContentPadding}">
+                                        <ContentPresenter Content="{TemplateBinding Content}" />
                                     </Border>
                                 </Grid>
                             </Grid>
@@ -140,7 +141,8 @@
                       CornerRadius="0" />
     </WindowChrome.WindowChrome>
 
-    <Grid Background="{StaticResource AppBackgroundBrush}"></Grid>
+    <Border Background="{StaticResource TitleBarBackgroundBrush}"
+            CornerRadius="{Binding InnerPaneCornerRadius, FallbackValue=5}"></Border>
     
     <!--<ScrollViewer VerticalScrollBarVisibility="Auto">
         <Frame x:Name="frame">
