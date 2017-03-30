@@ -23,6 +23,6 @@
     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}" />
 
     <system:Double x:Key="FontSizeLogo">25</system:Double>
-    <system:Double x:Key="FontSizeTopUI">15</system:Double>
+    <system:Double x:Key="FontSizeTopUi">15</system:Double>
 
 </ResourceDictionary>
