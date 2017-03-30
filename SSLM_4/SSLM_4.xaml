@@ -45,7 +45,7 @@
 
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=42}" />
-                                        <RowDefinition Height="1" />
+                                        <RowDefinition Height="Auto" />
                                         <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
 
@@ -121,8 +121,7 @@
                                             </LinearGradientBrush>
                                         </Border.Background>
                                     </Border>
-                                    <Border Grid.Row="2"
-                                            Padding="{Binding InnerContentPadding}">
+                                    <Border Grid.Row="2">
                                         <ContentPresenter Content="{TemplateBinding Content}" />
                                     </Border>
                                 </Grid>
@@ -141,8 +140,9 @@
                       CornerRadius="0" />
     </WindowChrome.WindowChrome>
 
-    <Border Background="{StaticResource TitleBarBackgroundBrush}"
-            CornerRadius="{Binding InnerPaneCornerRadius, FallbackValue=5}"></Border>
+    <Border Background="{StaticResource ContentBackgroundLightDarkBrush}">
+        
+    </Border>
     
     <!--<ScrollViewer VerticalScrollBarVisibility="Auto">
         <Frame x:Name="frame">

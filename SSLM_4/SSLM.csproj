@@ -176,6 +176,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <Resource Include="Resources\Fonts\FontAwesome\fontawesome-webfont.ttf" />
     <Resource Include="Resources\Fonts\Lato\Lato-Black.ttf" />
     <Resource Include="Resources\Fonts\Lato\Lato-Regular.ttf" />
     <Resource Include="Resources\Fonts\Lato\Lato-Thin.ttf" />

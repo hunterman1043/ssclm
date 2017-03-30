@@ -10,7 +10,7 @@ namespace HNTR.ViewModels {
 		#region Variables
 		private Window _Window;
 		private int _OuterMarginSize = 10;
-		private int _WindowRadius = 10;
+		private int _WindowRadius = 6;
 		#endregion
 
 		#region Commands
@@ -33,7 +33,6 @@ namespace HNTR.ViewModels {
 		public Thickness InnerContentPadding { get { return new Thickness(BorderThickness, 0, BorderThickness, BorderThickness); } }
 		public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize); } }
 		public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
-		public CornerRadius InnerPaneCornerRadius { get { return new CornerRadius(0, 0, WindowRadius / 2, WindowRadius / 2); } }
 
 		public int OuterMarginSize {
 			get {

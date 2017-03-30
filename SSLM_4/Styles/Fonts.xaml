@@ -5,6 +5,8 @@
     <FontFamily x:Key="LatoRegular">/SSLM_4;component/Resources/Fonts/Lato/#Lato Regular</FontFamily>
     <FontFamily x:Key="LatoThin">/SSLM_4;component/Resources/Fonts/Lato/#Lato Thin</FontFamily>
     <FontFamily x:Key="LatoBlack">/SSLM_4;component/Resources/Fonts/Lato/#Lato Black</FontFamily>
+    
+    <FontFamily x:Key="FontAwesome">/SSLM_4;component/Resources/Fonts/FontAwesome/#FontAwesome</FontFamily>
 
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
         <Setter Property="FontFamily" Value="{StaticResource LatoThin}" />
@@ -21,5 +23,6 @@
     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}" />
 
     <system:Double x:Key="FontSizeLogo">25</system:Double>
+    <system:Double x:Key="FontSizeTopUI">15</system:Double>
 
 </ResourceDictionary>

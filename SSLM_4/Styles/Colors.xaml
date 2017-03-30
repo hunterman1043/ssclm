@@ -1,10 +1,13 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Color x:Key="AppBackgroundDark">#FF252528</Color>
+    <Color x:Key="AppBackgroundDark">#252528</Color>
     <SolidColorBrush x:Key="AppBackgroundBrush" Color="{StaticResource AppBackgroundDark}" />
-    
-    <Color x:Key="OuterBorderBackgroundDark">#FFF0F0F3</Color>
+
+    <Color x:Key="ContentBackgroundLightDark">#3D3D40</Color>
+    <SolidColorBrush x:Key="ContentBackgroundLightDarkBrush" Color="{StaticResource ContentBackgroundLightDark}" />
+
+    <Color x:Key="OuterBorderBackgroundDark">#F0F0F3</Color>
     <SolidColorBrush x:Key="OuterBorderBackgroundBrush" Color="{StaticResource OuterBorderBackgroundDark}" />
     
     <Color x:Key="TitleBarForegroundLight">#FCFCFF</Color>
