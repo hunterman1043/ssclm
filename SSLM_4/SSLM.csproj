@@ -111,8 +111,8 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
-    <Compile Include="Views\FilePanelView.xaml.cs">
-      <DependentUpon>FilePanelView.xaml</DependentUpon>
+    <Compile Include="Views\LoginPageView.xaml.cs">
+      <DependentUpon>LoginPageView.xaml</DependentUpon>
     </Compile>
     <Page Include="SSLM_4.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -146,7 +146,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\FilePanelView.xaml">
+    <Page Include="Views\LoginPageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -226,6 +226,9 @@
   <ItemGroup>
     <Resource Include="Resources\Images\UI\Max-512.png" />
     <Resource Include="Resources\Images\UI\Max-512_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Background\main_BG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
