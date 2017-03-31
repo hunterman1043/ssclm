@@ -15,11 +15,7 @@ using System.Windows;
 
 [assembly: ComVisible(false)]
 
-[assembly: ThemeInfo(
-	ResourceDictionaryLocation.None,
-	ResourceDictionaryLocation.SourceAssembly
-)]
-
+[assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)]
 [assembly: AssemblyVersion("4.0.0.0")]
 [assembly: AssemblyFileVersion("4.0.0.0")]
 [assembly: NeutralResourcesLanguage("en-US")]

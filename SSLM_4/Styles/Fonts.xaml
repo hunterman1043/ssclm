@@ -2,11 +2,11 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=mscorlib">
 
-    <FontFamily x:Key="LatoRegular">/SSLM_4;component/Resources/Fonts/Lato/#Lato Regular</FontFamily>
-    <FontFamily x:Key="LatoThin">/SSLM_4;component/Resources/Fonts/Lato/#Lato Thin</FontFamily>
-    <FontFamily x:Key="LatoBlack">/SSLM_4;component/Resources/Fonts/Lato/#Lato Black</FontFamily>
+    <FontFamily x:Key="LatoRegular">/SSLM;component/Resources/Fonts/Lato/#Lato Regular</FontFamily>
+    <FontFamily x:Key="LatoThin">/SSLM;component/Resources/Fonts/Lato/#Lato Thin</FontFamily>
+    <FontFamily x:Key="LatoBlack">/SSLM;component/Resources/Fonts/Lato/#Lato Black</FontFamily>
     
-    <FontFamily x:Key="FontAwesome">/SSLM_4;component/Resources/Fonts/FontAwesome/#FontAwesome</FontFamily>
+    <FontFamily x:Key="FontAwesome">/SSLM;component/Resources/Fonts/FontAwesome/#FontAwesome</FontFamily>
 
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
         <Setter Property="FontFamily" Value="{StaticResource LatoThin}" />

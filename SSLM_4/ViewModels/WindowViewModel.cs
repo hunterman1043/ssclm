@@ -1,12 +1,14 @@
-﻿using System.Windows;
-using System.Windows.Input;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using HNTR.Models;
-using HNTR.Helpers;
+﻿namespace HNTR.ViewModels 
+{
+    using System.Windows;
+    using System.Windows.Input;
+    using GalaSoft.MvvmLight;
+    using GalaSoft.MvvmLight.Command;
+    using HNTR.Helpers;
+    using HNTR.Models;
 
-namespace HNTR.ViewModels {
-	public class WindowViewModel : ViewModelBase {
+	public class WindowViewModel : ViewModelBase 
+    {
 		#region Variables
 		private Window _Window;
 		private int _OuterMarginSize = 10;
@@ -55,11 +57,13 @@ namespace HNTR.ViewModels {
 		}
 		#endregion
 
-		public WindowViewModel(Window window) {
+		public WindowViewModel(Window window) 
+        {
 			_Window = window;
 			Title = Constants.MAIN_TITLE;
 
-			_Window.StateChanged += (sedner, e) => {
+			_Window.StateChanged += (sedner, e) => 
+            {
 				RaisePropertyChanged(nameof(ResizeBorderThickness));
 				RaisePropertyChanged(nameof(OuterMarginSizeThickness));
 				RaisePropertyChanged(nameof(WindowCornerRadius));
