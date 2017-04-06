@@ -100,10 +100,10 @@ namespace HNTR.Helpers
             GetTransform();
 
             // Listen out for source initialized to setup
-            mWindow.SourceInitialized += Window_SourceInitialized;
+            mWindow.SourceInitialized += this.WindowSourceInitialized;
 
             // Monitor for edge docking
-            mWindow.SizeChanged += Window_SizeChanged;
+            mWindow.SizeChanged += this.WindowSizeChanged;
         }
 
         #endregion
@@ -134,7 +134,7 @@ namespace HNTR.Helpers
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Window_SourceInitialized(object sender, System.EventArgs e)
+        private void WindowSourceInitialized(object sender, System.EventArgs e)
         {
             // Get the handle of this window
             var handle = (new WindowInteropHelper(mWindow)).Handle;
@@ -157,7 +157,7 @@ namespace HNTR.Helpers
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void WindowSizeChanged(object sender, SizeChangedEventArgs e)
         {
             // We cannot find positioning until the window transform has been established
             if (mTransformToDevice == default(Matrix))
@@ -245,15 +245,15 @@ namespace HNTR.Helpers
             NativeMethods.GetCursorPos(out lMousePosition);
 
             // Get the primary monitor at cursor position 0,0
-            var lPrimaryScreen = NativeMethods.MonitorFromPoint(new POINT(0, 0), MonitorOptions.MONITOR_DEFAULTTOPRIMARY);
+            var lPrimaryScreen = NativeMethods.MonitorFromPoint(new POINT(0, 0), MonitorOptions.MonitorDefaulttoprimary);
 
             // Try and get the primary screen information
-            var lPrimaryScreenInfo = new MONITORINFO();
+            var lPrimaryScreenInfo = new Monitorinfo();
             if (NativeMethods.GetMonitorInfo(lPrimaryScreen, lPrimaryScreenInfo) == false)
                 return;
 
             // Now get the current screen
-            var lCurrentScreen = NativeMethods.MonitorFromPoint(lMousePosition, MonitorOptions.MONITOR_DEFAULTTONEAREST);
+            var lCurrentScreen = NativeMethods.MonitorFromPoint(lMousePosition, MonitorOptions.MonitorDefaulttonearest);
 
             // If this has changed from the last one, update the transform
             if (lCurrentScreen != mLastScreen || mTransformToDevice == default(Matrix))
@@ -263,7 +263,7 @@ namespace HNTR.Helpers
             mLastScreen = lCurrentScreen;
 
             // Get min/max structure to fill with information
-            var lMmi = (MINMAXINFO)Marshal.PtrToStructure(lParam, typeof(MINMAXINFO));
+            var lMmi = (Minmaxinfo)Marshal.PtrToStructure(lParam, typeof(Minmaxinfo));
 
             // If it is the primary screen, use the rcWork variable
             if (lPrimaryScreen.Equals(lCurrentScreen) == true)
@@ -300,16 +300,16 @@ namespace HNTR.Helpers
 
     enum MonitorOptions : uint
     {
-        MONITOR_DEFAULTTONULL = 0x00000000,
-        MONITOR_DEFAULTTOPRIMARY = 0x00000001,
-        MONITOR_DEFAULTTONEAREST = 0x00000002
+        MonitorDefaulttonull = 0x00000000,
+        MonitorDefaulttoprimary = 0x00000001,
+        MonitorDefaulttonearest = 0x00000002
     }
 
 
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
-    public class MONITORINFO
+    public class Monitorinfo
     {
-        public int cbSize = Marshal.SizeOf(typeof(MONITORINFO));
+        public int cbSize = Marshal.SizeOf(typeof(Monitorinfo));
         public Rectangle rcMonitor = new Rectangle();
         public Rectangle rcWork = new Rectangle();
         public int dwFlags = 0;
@@ -331,7 +331,7 @@ namespace HNTR.Helpers
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public struct MINMAXINFO
+    public struct Minmaxinfo
     {
         public POINT ptReserved;
         public POINT ptMaxSize;
@@ -373,7 +373,7 @@ namespace HNTR.Helpers
 		internal static extern bool GetCursorPos(out POINT lpPoint);
 
 		[DllImport("user32.dll")]
-		internal static extern bool GetMonitorInfo(IntPtr hMonitor, MONITORINFO lpmi);
+		internal static extern bool GetMonitorInfo(IntPtr hMonitor, Monitorinfo lpmi);
 
 		[DllImport("user32.dll", SetLastError = true)]
 		internal static extern IntPtr MonitorFromPoint(POINT pt, MonitorOptions dwFlags);

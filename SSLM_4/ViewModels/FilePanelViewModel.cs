@@ -11,14 +11,14 @@ using System.Diagnostics;
 
 namespace HNTR.ViewModels {
 	public class FilePanelViewModel : ViewModelBase {
-		private RelayCommand<bool> _closeCommand;
-		private RelayCommand<bool> _minimizeCommand;
+		private RelayCommand<bool> closeCommand;
+		private RelayCommand<bool> minimizeCommand;
 
 		public string Title { get; private set; }
 
 		public RelayCommand<bool> CloseCommand {
 			get {
-				return _closeCommand ?? (_closeCommand = new RelayCommand<bool>(
+				return this.closeCommand ?? (this.closeCommand = new RelayCommand<bool>(
 					close => {
 						close = true;
 
@@ -32,7 +32,7 @@ namespace HNTR.ViewModels {
 
 		public RelayCommand<bool> MinimizeCommand {
 			get {
-				return _minimizeCommand ?? (_minimizeCommand = new RelayCommand<bool>(
+				return this.minimizeCommand ?? (this.minimizeCommand = new RelayCommand<bool>(
 					minimize => {
 						minimize = true;
 
@@ -45,7 +45,7 @@ namespace HNTR.ViewModels {
 		}
 
 		public FilePanelViewModel () {
-			Title = Constants.MAIN_TITLE;
+			Title = Constants.MainTitle;
 		}
 	}
 }

@@ -1,6 +1,14 @@
-﻿using System.Reflection;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AssemblyInfo.cs" company="ProjectEnterprise">
+// Matthew Leslie 2017 GNU 3.0
+// </copyright>
+// <summary>
+// This file contains publication information about the assembly for the SSLM Application.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+using System.Reflection;
 using System.Resources;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 

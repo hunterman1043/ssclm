@@ -1,5 +1,5 @@
 ﻿namespace HNTR.Models {
 	public static class Constants {
-		public const string MAIN_TITLE = "SSLM (Secure Subversion Login Manager)";
+		public const string MainTitle = "SSLM (Secure Subversion Login Manager)";
 	}
 }

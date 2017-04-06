@@ -1,4 +1,5 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<!-- Resource Dictionary containing all standardized Colors. -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Color x:Key="AppBackgroundDark">#252528</Color>
@@ -13,13 +14,13 @@
     <Color x:Key="TitleBarForegroundLight">#FCFCFF</Color>
     <SolidColorBrush x:Key="TitleBarForegroundBrush" Color="{StaticResource TitleBarForegroundLight}" />
 
-    <Color x:Key="TitleBarBackgroundDark">#4C4C50</Color>
+    <Color x:Key="TitleBarBackgroundDark">#4A4A4D</Color>
     <SolidColorBrush x:Key="TitleBarBackgroundBrush" Color="{StaticResource TitleBarBackgroundDark}" />
     
-    <Color x:Key="MinimizeMouseOverBackground">#404043</Color>
+    <Color x:Key="MinimizeMouseOverBackground">#5C5C5F</Color>
     <SolidColorBrush x:Key="MinimizeMouseOverBackgroundBrush" Color="{StaticResource MinimizeMouseOverBackground}" />
     
-    <Color x:Key="MinimizePressedBackground">#8E8E92</Color>
+    <Color x:Key="MinimizePressedBackground">#6F6F72</Color>
     <SolidColorBrush x:Key="MinimizePressedBackgroundBrush" Color="{StaticResource MinimizePressedBackground}" />
 
     <Color x:Key="CloseMouseOverBackground">#E81123</Color>

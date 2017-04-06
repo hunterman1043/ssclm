@@ -10,9 +10,9 @@
 	public class WindowViewModel : ViewModelBase 
     {
 		#region Variables
-		private Window _Window;
-		private int _OuterMarginSize = 10;
-		private int _WindowRadius = 6;
+		private Window window;
+		private int outerMarginSize = 10;
+		private int windowRadius = 6;
 		#endregion
 
 		#region Commands
@@ -38,31 +38,31 @@
 
 		public int OuterMarginSize {
 			get {
-				return _Window.WindowState == WindowState.Maximized ? 0 : _OuterMarginSize;
+				return this.window.WindowState == WindowState.Maximized ? 0 : this.outerMarginSize;
 			}
 
 			set {
-				_OuterMarginSize = value;
+				this.outerMarginSize = value;
 			}
 		}
 
 		public int WindowRadius {
 			get {
-				return _Window.WindowState == WindowState.Maximized ? 0 : _WindowRadius;
+				return this.window.WindowState == WindowState.Maximized ? 0 : this.windowRadius;
 			}
 
 			set {
-				_WindowRadius = value;
+				this.windowRadius = value;
 			}
 		}
 		#endregion
 
 		public WindowViewModel(Window window) 
         {
-			_Window = window;
-			Title = Constants.MAIN_TITLE;
+			this.window = window;
+			Title = Constants.MainTitle;
 
-			_Window.StateChanged += (sedner, e) => 
+			this.window.StateChanged += (sender, e) => 
             {
 				RaisePropertyChanged(nameof(ResizeBorderThickness));
 				RaisePropertyChanged(nameof(OuterMarginSizeThickness));
@@ -71,19 +71,19 @@
 				RaisePropertyChanged(nameof(WindowRadius));
 			};
 
-			MinimizeCommand = new RelayCommand(() => _Window.WindowState = WindowState.Minimized);
-			MaximizeCommand = new RelayCommand(() => _Window.WindowState ^= WindowState.Maximized);
-			CloseCommand = new RelayCommand(() => _Window.Close());
-			MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(_Window, GetMousePosition()));
+			MinimizeCommand = new RelayCommand(() => this.window.WindowState = WindowState.Minimized);
+			MaximizeCommand = new RelayCommand(() => this.window.WindowState ^= WindowState.Maximized);
+			CloseCommand = new RelayCommand(() => this.window.Close());
+			MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(this.window, GetMousePosition()));
 
-			var resizer = new WindowResizer(_Window);
+			var resizer = new WindowResizer(this.window);
 		}
 
 		#region Helpers
 		private Point GetMousePosition()
 		{
-			var position = Mouse.GetPosition(_Window);
-			return new Point(position.X + _Window.Left, position.Y + _Window.Top);
+			var position = Mouse.GetPosition(this.window);
+			return new Point(position.X + this.window.Left, position.Y + this.window.Top);
 		}
 		#endregion
 	}

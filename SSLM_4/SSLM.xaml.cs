@@ -1,15 +1,17 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="SSLM.xaml.cs" company="ProjectEnterprise">
-//  Matthew Leslie 2017 GNU 3.0
+// Matthew Leslie 2017 GNU 3.0
 // </copyright>
 // <summary>
-//   Defines the SSLM type.
+// This file contains the main SSLM Application. (Code-Behind)
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace HNTR
 {
-    using System;
+	#region Using Dependencies
+
+	using System;
     using System.Threading.Tasks;
     using System.Windows;
     using System.Windows.Media.Animation;
@@ -21,18 +23,30 @@ namespace HNTR
     using HNTR.Helpers;
     using HNTR.ViewModels;
 
-    /// <summary>
-    /// Code-behind to XAML <see cref="SSLM"/>
-    /// </summary>
-    public partial class SSLM
+	#endregion
+
+	#region Class
+
+	/// <summary>
+	/// <see cref="SSLM"/>
+	/// </summary>
+	public partial class SSLM
     {
         #region Private Members
 
 		/// <summary>
-		/// Delays the animation by <see cref="ANIMDELAY"/>.
+		/// Delays the animation by <see cref="ANIM_DELAY"/>.
 		/// </summary>
-		private const int ANIMDELAY = 150;
-        #endregion
+		private const int ANIM_DELAY = 150;
+
+		/// <summary>
+		/// Floating-point comparison <see cref="TOLERANCE"/>.
+		/// </summary>
+		private const double TOLERANCE = double.Epsilon;
+
+		#endregion
+
+	    #region Constructor
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="SSLM"/> class.
@@ -67,54 +81,78 @@ namespace HNTR
 				});
 		}
 
-        /// <summary>
-        /// TODO The window_ activated.
-        /// </summary>
-        /// <param name="sender">
-        /// TODO The sender.
-        /// </param>
-        /// <param name="e">
-        /// TODO The e.
-        /// </param>
-        private void Window_Activated(object sender, EventArgs e)
-		{
-			if (this.Opacity != 100 && WindowState != WindowState.Normal)
-			{
-			    this.Dispatcher.BeginInvoke(
+		#endregion
+
+		#region Events
+
+		/// <summary>
+		/// The <see cref="WindowActivated"/> event method.
+		/// </summary>
+		/// <param name="sender">
+		/// The <see cref="sender"/> is ignored.
+		/// </param>
+		/// <param name="e">
+		/// The <see cref="e"/> event is ignored.
+		/// </param>
+		private void WindowActivated(object sender, EventArgs e)
+        {
+	        if (Math.Abs(this.Opacity - 100) > TOLERANCE && this.WindowState != WindowState.Normal)
+	        {
+		        this.Dispatcher.BeginInvoke(
 			        DispatcherPriority.ApplicationIdle,
 			        (DispatcherOperationCallback)delegate
-			            {
-			                this.NormalizeAnim();
-		                    return null;
-		                },
-		            null);
-		    }
-		}
+				        {
+					        this.NormalizeAnim();
+					        return null;
+				        },
+			        null);
+	        }
+        }
 
+		#endregion
+
+	    #region Awaited Private Methods
+
+		/// <summary>
+		/// Sets the window to be in a <see cref="WindowState.Minimized"/> state in an awaited Task.
+		/// </summary>
 		private async void MinimizeAnim()
 		{
-			DoubleAnimation _opacityAnim = new DoubleAnimation();
-			_opacityAnim.From = 1;
-			_opacityAnim.To = 0;
-			_opacityAnim.Duration = new Duration(TimeSpan.FromMilliseconds(ANIMDELAY));
-			this.BeginAnimation(OpacityProperty, _opacityAnim);
+			var opacityAnim = new DoubleAnimation
+				                  {
+					                  From = 1,
+					                  To = 0,
+					                  Duration = new Duration(TimeSpan.FromMilliseconds(ANIM_DELAY))
+				                  };
 
-			await Task.Delay(ANIMDELAY);
+			this.BeginAnimation(OpacityProperty, opacityAnim);
 
-			WindowState = WindowState.Minimized;
+			await Task.Delay(ANIM_DELAY);
+
+			this.WindowState = WindowState.Minimized;
 		}
 
+		/// <summary>
+		/// Sets the window to be in a <see cref="WindowState.Normal"/> state in an awaited Task.
+		/// </summary>
 		private async void NormalizeAnim()
 		{
-			DoubleAnimation _opacityAnim = new DoubleAnimation();
-			_opacityAnim.From = 0;
-			_opacityAnim.To = 1;
-			_opacityAnim.Duration = new Duration(TimeSpan.FromMilliseconds(ANIMDELAY));
-			this.BeginAnimation(OpacityProperty, _opacityAnim);
+			var opacityAnim = new DoubleAnimation
+				                  {
+					                  From = 0,
+					                  To = 1,
+					                  Duration = new Duration(TimeSpan.FromMilliseconds(ANIM_DELAY))
+				                  };
 
-			await Task.Delay(ANIMDELAY);
+			this.BeginAnimation(OpacityProperty, opacityAnim);
 
-			WindowState = WindowState.Normal;
+			await Task.Delay(ANIM_DELAY);
+
+			this.WindowState = WindowState.Normal;
 		}
+
+		#endregion
 	}
+
+	#endregion
 }
