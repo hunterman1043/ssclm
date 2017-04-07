@@ -3,11 +3,11 @@
 // Matthew Leslie 2017 GNU 3.0
 // </copyright>
 // <summary>
-// This file contains the SSLM Application Entry Point. (Code-Behind)
+// This file contains the MainWindow Application Entry Point. (Code-Behind)
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace HNTR
+namespace SSLM
 {
 	#region Using Depedencies
 
@@ -20,8 +20,15 @@ namespace HNTR
 	/// <summary>
 	/// Entry point to main application
 	/// </summary>
-	public partial class App : Application
+	public partial class App
 	{
+		protected override void OnStartup(StartupEventArgs e)
+		{
+			base.OnStartup(e);
+
+			Current.MainWindow = new MainWindow();
+			Current.MainWindow.Show();
+		}
 	}
 
 	#endregion

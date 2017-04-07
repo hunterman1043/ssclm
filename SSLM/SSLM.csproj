@@ -7,9 +7,9 @@
     <ProjectGuid>{D4218E4C-2DE2-4E28-84F9-43EE833AEA3A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HNTR</RootNamespace>
+    <RootNamespace>SSLM</RootNamespace>
     <AssemblyName>SSLM</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -29,6 +29,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -105,8 +106,6 @@
     <Compile Include="Helpers\MinimizeMessage.cs" />
     <Compile Include="Helpers\CloseMessage.cs" />
     <Compile Include="Helpers\WindowResizer.cs" />
-    <Compile Include="Models\Constants.cs" />
-    <Compile Include="Models\DocumentModel.cs" />
     <Compile Include="ViewModels\FilePanelViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
@@ -135,14 +134,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\ButtonStyles.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Styles\GridStyles.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Styles\TextStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -232,6 +223,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\Background\main_BG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSLM.Core\SSLM.Core.csproj">
+      <Project>{c71da21d-701c-40f4-8ada-067288bc4ecc}</Project>
+      <Name>SSLM.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

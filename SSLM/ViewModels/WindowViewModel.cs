@@ -1,28 +1,33 @@
-﻿namespace HNTR.ViewModels 
+﻿namespace SSLM
 {
     using System.Windows;
     using System.Windows.Input;
+
+	using Core;
     using GalaSoft.MvvmLight;
     using GalaSoft.MvvmLight.Command;
-    using HNTR.Helpers;
-    using HNTR.Models;
 
 	public class WindowViewModel : ViewModelBase 
     {
 		#region Variables
+
 		private Window window;
 		private int outerMarginSize = 10;
 		private int windowRadius = 6;
+
 		#endregion
 
 		#region Commands
+
 		public ICommand MinimizeCommand { get; set; }
 		public ICommand MaximizeCommand { get; set; }
 		public ICommand CloseCommand { get; set; }
 		public ICommand MenuCommand { get; set; }
+
 		#endregion
 
 		#region Properties
+
 		public string Title { get; private set; }
 
 		public int BorderThickness { get; set; } = 6;
@@ -55,6 +60,7 @@
 				this.windowRadius = value;
 			}
 		}
+
 		#endregion
 
 		public WindowViewModel(Window window) 
@@ -80,11 +86,13 @@
 		}
 
 		#region Helpers
+
 		private Point GetMousePosition()
 		{
 			var position = Mouse.GetPosition(this.window);
 			return new Point(position.X + this.window.Left, position.Y + this.window.Top);
 		}
+
 		#endregion
 	}
 }

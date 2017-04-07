@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSLM", "SSLM_4\SSLM.csproj", "{D4218E4C-2DE2-4E28-84F9-43EE833AEA3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSLM", "SSLM\SSLM.csproj", "{D4218E4C-2DE2-4E28-84F9-43EE833AEA3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSLM.Core", "SSLM.Core\SSLM.Core.csproj", "{C71DA21D-701C-40F4-8ADA-067288BC4ECC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D4218E4C-2DE2-4E28-84F9-43EE833AEA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4218E4C-2DE2-4E28-84F9-43EE833AEA3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4218E4C-2DE2-4E28-84F9-43EE833AEA3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C71DA21D-701C-40F4-8ADA-067288BC4ECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C71DA21D-701C-40F4-8ADA-067288BC4ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C71DA21D-701C-40F4-8ADA-067288BC4ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C71DA21D-701C-40F4-8ADA-067288BC4ECC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

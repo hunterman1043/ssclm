@@ -8,15 +8,14 @@
  * All Credit Goes to Author
  ****************************************************/
 
-using System;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-using System.Windows;
-using System.Windows.Interop;
-using System.Windows.Media;
-
-namespace HNTR.Helpers
+namespace SSLM
 {
+	using System;
+	using System.Runtime.InteropServices;
+	using System.Windows;
+	using System.Windows.Interop;
+	using System.Windows.Media;
+
 	#pragma warning disable
 	/// <summary>
 	/// The dock position of the window

@@ -1,13 +1,13 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="SSLM.xaml.cs" company="ProjectEnterprise">
+// <copyright file="MainWindow.xaml.cs" company="ProjectEnterprise">
 // Matthew Leslie 2017 GNU 3.0
 // </copyright>
 // <summary>
-// This file contains the main SSLM Application. (Code-Behind)
+// This file contains the main MainWindow Application. (Code-Behind)
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace HNTR
+namespace SSLM
 {
 	#region Using Dependencies
 
@@ -20,17 +20,14 @@ namespace HNTR
 
     using GalaSoft.MvvmLight.Messaging;
 
-    using HNTR.Helpers;
-    using HNTR.ViewModels;
-
 	#endregion
 
 	#region Class
 
 	/// <summary>
-	/// <see cref="SSLM"/>
+	/// <see cref="SSLM.MainWindow"/>
 	/// </summary>
-	public partial class SSLM
+	public partial class MainWindow
     {
         #region Private Members
 
@@ -49,9 +46,9 @@ namespace HNTR
 	    #region Constructor
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="SSLM"/> class.
+		/// Initializes a new instance of the <see cref="SSLM.MainWindow"/> class.
 		/// </summary>
-		public SSLM()
+		public MainWindow()
 		{
 			this.InitializeComponent();
 
